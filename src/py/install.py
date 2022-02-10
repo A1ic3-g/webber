@@ -12,7 +12,7 @@ else:
     PATH_SEPERATOR = '/'
     
 
-INSTALL_DIR = "..{}gameservers{}".format(PATH_SEPERATOR, PATH_SEPERATOR)
+INSTALL_DIR = "..{}..{}gameservers{}".format(PATH_SEPERATOR, PATH_SEPERATOR, PATH_SEPERATOR)
 
 
 # Returns 1 if steamcmd not installed and on path else returns 0
