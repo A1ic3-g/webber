@@ -10,7 +10,6 @@ if platform.system() == "Windows":
     PATH_SEPERATOR = "\\"
 else:
     PATH_SEPERATOR = '/'
-    
 
 INSTALL_DIR = "..{}gameservers{}".format(PATH_SEPERATOR, PATH_SEPERATOR)
 
