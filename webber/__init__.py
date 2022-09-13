@@ -4,11 +4,10 @@ from flask_login import LoginManager
 from pathlib import Path
 
 # init SQLAlchemy so we can use it later in our models
-db = SQLAlchemy()
-
+db = SQLAlchemy() 
 def create_app():
     app = Flask(__name__)
-    with open(f'{Path(__file__).parent.resolve()}/secrets/secret-key.key', 'r') as file:
+    with open(Path(__file__).parent.resolve().joinpath("secrets","secret-key.key"), 'r') as file:
         app.config['SECRET_KEY'] = file.read().replace('\n', '')
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 
